@@ -4,6 +4,23 @@ import { useSprings, animated, interpolate } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import './styles.css'
 
+
+/* 
+might work for react v18  
+I fixed it using
+
+        opacity: x.to({ range: [0, 1], output: [0, 1] }) as any,
+Is there a better way than using the following with v9?
+
+        transform: x
+          .to({
+            range: [0, 0.2, 0.5, 1],
+            output: [1, 0.7, 1.5, 1],
+          })
+          .to((x: number) => `scale(${x}) rotate(4deg)`),
+
+*/
+
 const cards = [
 
   'https://lh5.googleusercontent.com/IgJ4s85Toq6hp_NZ-4Y6aM2i7W7cpXIRNKRlG_0dMjHE6rIybnLDKRhUdSKk-ONC7FMcuBL3XIlz47fMwpQ5sTy-5iH_vjp_JDLjqoHcfrfH9XKOUqQ2DKosvavNkoeYM6-fkvjY',
@@ -25,7 +42,7 @@ const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg
 
 function Deck() {
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
-  const [props, set] = useSprings(cards.length, (i) => ({ ...to(i), from: from(i) })) // Create a bunch of springs using the helpers above
+  const [props, set] = useSprings(cards.length, (i) => ({ ...to(i), from: from(i) })) // const { x } = useSpring({ from: { x: 0 }, x: 1, config: { duration: 1000 } })   // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity }) => {
     const trigger = velocity > 0.2 // If you flick hard enough it should trigger the card to fly out
