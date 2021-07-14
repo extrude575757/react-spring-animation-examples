@@ -4,7 +4,7 @@ import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import './styles1.css'
-
+import './styles.css';
 const pages = [
   'https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   'https://images.pexels.com/photos/296878/pexels-photo-296878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
