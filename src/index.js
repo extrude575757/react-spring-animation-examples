@@ -5,12 +5,16 @@ import { useGesture } from 'react-use-gesture'
 import './styles.css'
 
 const cards = [
+
+  'https://lh5.googleusercontent.com/IgJ4s85Toq6hp_NZ-4Y6aM2i7W7cpXIRNKRlG_0dMjHE6rIybnLDKRhUdSKk-ONC7FMcuBL3XIlz47fMwpQ5sTy-5iH_vjp_JDLjqoHcfrfH9XKOUqQ2DKosvavNkoeYM6-fkvjY',
   'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg',
+  'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg',  
   'https://upload.wikimedia.org/wikipedia/en/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'
+  'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg',
+  'https://lh5.googleusercontent.com/i_FrSfKJLVO4qVo8-qeY6jFgYCClOmXnuyl-HkvDqkjaNB6-IzHY2I5JYbDCpadGtD8-82dzmpX_zgZxV82BJQdWWM_OmbxLDMW63zUP68YjtEBOEJ9AdmrFvmyAmHOVNt4hqCx9',
+  'https://lh6.googleusercontent.com/L3k0H3yqgAUWnkr4ybvSpxN7XSM-iSEVRR9w2zDXR3SAG38B20BU98y4ztkeNNmG6y_wuqlM_tSh6gcomN9dCxbOIRr_Iut5T_mslMq55d59sTzXLy3X8dW2jMUUmoyO20y6cfv7',
+  'https://lh6.googleusercontent.com/6C9w4vKoNI15IC8VqOElqn5sKBcUD6Nrk_It3faYT5KghMBUPHyOY8MtHJGCpMPsAkjDNqHCjVSipaoJNLlB6AlnAJU8o78LHs_toX2NZ2bFHrVjH62antL-oSqBfCF8H1L8zzxr',
+  'https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MUSBimQI7HeFzkV5iEMsUlrGG7nzUV0WYKo00SdxIqfslYwO0MtmtNop2CNKvTIzeGQnBSTz7muxnpsB3N5BFrAfRcpfYlaqxnAQYg',
 ]
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
